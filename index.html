@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Vishal Mishra</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        /* Container styles for centering and styling */
+        div {
+            color: white;
+            text-align: center;
+        }
+
+        /* Animation for image */
+        img {
+            height: auto;
+            width: auto;
+            filter: drop-shadow(10px 10px 10px black);
+            /* Animation for bounce on page load */
+            animation: bounceIn 2s ease-in-out;
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect */
+        img:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        /* Bounce in animation keyframes */
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="images/weather-logo.png" alt="Weather Logo">
+        <h1>Welcome to the Weather Web App</h1>
+        <h2>Technologies Used:</h2>
+        <p>HTML, CSS, JS, Java, Servlet, JSP, OpenWeather API</p>
+
+<!-- ye from me action btata h ki servlet me post me kaha kya kaise jayega-->
+<!-- or is method me vo rhega vo call krvana h jaise mujhe dopost call krna tha to post likah h gdo get hota to get likhete-->
+
+        <form action="MyServlet" method="post" class="searchInput">
+            <input type="text" placeholder="Enter City Name" id="searchInput"  name="city" />
+            <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+</body>
+
+</html>
